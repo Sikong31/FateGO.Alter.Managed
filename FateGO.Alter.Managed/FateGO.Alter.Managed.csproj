@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{932AB691-2F38-4B9D-A708-DE5AA469A710}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FateGO.Alter.Managed</RootNamespace>
+    <AssemblyName>FateGO.Alter.Managed</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\ProgramData\FateGO\Dll\Original_CN_1.16.2\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\ProgramData\FateGO\Dll\Original_CN_1.16.2\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="PlayMaker">
+      <HintPath>..\..\..\..\ProgramData\FateGO\Dll\Original_CN_1.16.2\PlayMaker.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\ProgramData\FateGO\Dll\Original_CN_1.16.2\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\ProgramData\FateGO\Dll\Original_CN_1.16.2\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="usequencerRuntime">
+      <HintPath>..\..\..\..\ProgramData\FateGO\Dll\Original_CN_1.16.2\usequencerRuntime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlterOptionComponet.cs" />
+    <Compile Include="AsyncActions.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="FGOAlter.cs" />
+    <Compile Include="FGOAlterLog.cs" />
+    <Compile Include="UI\GameOptionButton.cs" />
+    <Compile Include="UI\GameOptionSlider.cs" />
+    <Compile Include="UI\GameOptionToggle.cs" />
+    <Compile Include="UI\IHeight.cs" />
+    <Compile Include="MyWaitForSecond.cs" />
+    <Compile Include="NGUIUtil.cs" />
+    <Compile Include="PlayerPrefscs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
